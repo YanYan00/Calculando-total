@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando el total</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+                <h4>Laptop Gamer AMD</h4>
+                <p>Precio base: $<span id="precio"></span></p>
+                <p>Cantidad:<span id="cantidad"></span>
+                <button onclick="
+                    cantidad=cantidad+1;
+                    totalPagar = cantidad* precioBase;
+                    document.querySelector('#cantidad').innerHTML = cantidad;
+                    document.querySelector('#totalPagar').innerHTML=totalPagar;
+                    ">+</button>
+                <button onclick="
+                    cantidad=cantidad-1;
+                    totalPagar = cantidad* precioBase;
+                    document.querySelector('#cantidad').innerHTML = cantidad;
+                    document.querySelector('#totalPagar').innerHTML=totalPagar;
+                ">-</button></p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span id="totalPagar"></span> </p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
